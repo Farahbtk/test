@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - Cantine DRÄXLMAIER</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo Draxmaier" class="logo">
+            <span class="brand">DRÄXLMAIER Cantine</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="commande.html" class="nav-link">Commande</a>
+            <a href="compte.html" class="nav-link active">Compte</a>
+        </nav>
+    </header>
+    <main class="compte-main">
+        <h1 class="compte-title">Mon Compte</h1>
+        <section class="login-section">
+            <h2>Connexion / Inscription</h2>
+            <form class="login-form" id="loginForm">
+                <input type="email" placeholder="Email professionnel" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button type="submit" class="hero-btn">Connexion</button>
+            </form>
+        </section>
+        <section class="orders-section">
+            <h2>Historique des commandes</h2>
+            <ul class="orders-list" id="ordersList">
+                <li>Aucune commande pour le moment.</li>
+            </ul>
+        </section>
+        <section class="modify-section">
+            <h2>Modifier / Annuler une commande</h2>
+            <form class="modify-form" id="modifyForm">
+                <input type="text" placeholder="ID de la commande" required>
+                <button type="submit" class="hero-btn secondary">Modifier</button>
+                <button type="button" class="hero-btn danger">Annuler</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 DRÄXLMAIER Cantine. Tous droits réservés.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html> 

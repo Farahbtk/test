@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - Cantine DRÄXLMAIER</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo Draxmaier" class="logo">
+            <span class="brand">DRÄXLMAIER Cantine</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="commande.html" class="nav-link active">Commande</a>
+            <a href="compte.html" class="nav-link">Compte</a>
+        </nav>
+    </header>
+    <main class="commande-main">
+        <h1 class="commande-title">Commander votre repas</h1>
+        <form class="commande-form" id="orderForm">
+            <div class="form-group">
+                <label for="plat">Plat principal</label>
+                <select id="plat" name="plat" required>
+                    <option value="">--Choisir--</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="pate">Pâtes</option>
+                    <option value="couscous">Couscous</option>
+                    <option value="salade">Salade</option>
+                    <option value="mlewi">Mlewi</option>
+                </select>
+            </div>
+            <div class="form-group" id="plat-type-group" style="display:none;">
+                <label for="plat-type">Type</label>
+                <select id="plat-type" name="plat-type">
+                    <!-- Options will be dynamically inserted here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dessert">Dessert</label>
+                <select id="dessert" name="dessert">
+                    <option value="">--Aucun--</option>
+                    <option value="cheesecake">Cheesecake (10 DT)</option>
+                    <option value="tiramisu">Tiramisu (13 DT)</option>
+                    <option value="donuts">Donuts (3 DT)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="boisson">Boisson</label>
+                <select id="boisson" name="boisson">
+                    <option value="">--Aucune--</option>
+                    <option value="sprite">Sprite (2 DT)</option>
+                    <option value="fanta">Fanta (2 DT)</option>
+                    <option value="pepsi">Pepsi (2 DT)</option>
+                    <option value="water">Eau (1 DT)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="creneau">Créneau horaire de retrait</label>
+                <input type="time" id="creneau" name="creneau" min="12:00" max="14:30" required>
+                <small>Entre 12h00 et 14h30</small>
+            </div>
+            <button type="submit" class="hero-btn">Confirmer la commande</button>
+        </form>
+        <div id="orderConfirmation" class="order-confirmation" style="display:none;">
+            <h2>Commande confirmée !</h2>
+            <p>Votre repas sera prêt et chaud à l'heure choisie.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 DRÄXLMAIER Cantine. Tous droits réservés.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html> 
